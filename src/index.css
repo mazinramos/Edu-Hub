@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background-color: #f7f9fc;
+}
+
+/* تفضيل تقليل الحركة لمن يحتاجه */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.focus-ring {
+  outline: none;
+}
+.focus-ring:focus-visible {
+  box-shadow: 0 0 0 3px rgba(47, 102, 245, 0.35);
+}
+
+@media print {
+  body {
+    background: white !important;
+  }
+  .print\:hidden {
+    display: none !important;
+  }
+}
